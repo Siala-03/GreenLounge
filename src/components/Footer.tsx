@@ -120,7 +120,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Kiqao Lounge. All rights reserved.
           </p>
           <p className="text-kiqao-cream/50 text-xs flex items-center">
-            Crafted with passion
+            Crafted with passion • Developed by Siala Solutions
           </p>
         </div>
       </div>

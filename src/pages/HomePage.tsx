@@ -233,19 +233,19 @@ export function HomePage() {
                 name: 'Wagyu Beef Tenderloin',
                 desc: 'Perfectly seared with truffle jus and seasonal vegetables',
                 price: 'RWF 102,000',
-                img: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600'
+                img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweoNINUKALKnq468ViFeiZucYpAE8KjAmcRKNqvgfJjKFf5Wk_X6k8KFZNfD2fJ72ePmn-E4WDMEU41GK89D_JrRLn0l2lXjdLfxkeUk7hNFu3kymyaU66Cgf55T4RWmT-XEmvQpBA=w243-h406-n-k-no-nu'
               },
               {
                 name: 'Pan-Seared Sea Bass',
                 desc: 'With saffron risotto and citrus beurre blanc',
                 price: 'RWF 86,400',
-                img: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600'
+                img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweq61k1h1hlohu7nNEBfnkiD6XuIIdf7T_5HftSChXj5uFM747zTgR4HJJR9cWqB4CTHfE3r8k5jrx2eg2SmmQmQ0KMsotKhL02PFbxEo3E7l4KcEERf3FitW5yOtmhv1LVTU_YP=w243-h406-n-k-no-nu'
               },
               {
                 name: 'Truffle Mushroom Ravioli',
                 desc: 'Handmade pasta with black truffle cream sauce',
                 price: 'RWF 69,600',
-                img: 'https://images.unsplash.com/photo-1587740908075-9e245070dfaa?w=600'
+                img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweodshvNWigwxSsTSWM_oR1H5ZBwLihJ7jv0NtU3BFA7NIH4T-XxyNGMQ_gtYkcACHj0Mcd9O8znoilg_OVAYToNzDhB4-IpUP4jZhDFr_NdodoXccE292655bcDQ04uQvYotrQFER-DF_Cd=w243-h174-n-k-no-nu'
               }].
               map((dish, i) =>
               <motion.div
