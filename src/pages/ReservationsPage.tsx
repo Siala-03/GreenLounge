@@ -316,17 +316,6 @@ export function ReservationsPage() {
                 <div className="space-y-6 text-sm">
                   <div>
                     <h4 className="text-kiqao-gold uppercase tracking-wider mb-2 text-xs">
-                      Dress Code
-                    </h4>
-                    <p className="text-kiqao-cream/80">
-                      Smart Casual to Formal. We kindly ask guests to refrain
-                      from wearing athletic wear, flip-flops, or excessively
-                      casual attire.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-kiqao-gold uppercase tracking-wider mb-2 text-xs">
                       Cancellation Policy
                     </h4>
                     <p className="text-kiqao-cream/80">
@@ -353,14 +342,14 @@ export function ReservationsPage() {
                 </h4>
                 <div className="flex flex-col gap-4">
                   <a
-                    href="tel:+254700123456"
+                    href="tel:+250785023984"
                     className="flex items-center justify-center text-kiqao-cream hover:text-kiqao-gold transition-colors">
                     
                     <PhoneIcon className="w-4 h-4 mr-2" />
                     +254 700 123 456
                   </a>
                   <a
-                    href="https://wa.me/254700123456"
+                    href="https://wa.me/250785023984"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center text-green-400 hover:text-green-300 transition-colors">

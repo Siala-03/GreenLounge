@@ -620,7 +620,7 @@ export function HomePage() {
                 Book a Table
               </Link>
               <a
-                href="tel:+254700123456"
+                href="tel:+250785023984"
                 className="px-8 py-4 border border-kiqao-gold text-kiqao-gold font-medium tracking-wider hover:bg-kiqao-gold/10 transition-colors rounded-sm">
                 
                 Call Us

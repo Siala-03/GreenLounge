@@ -275,7 +275,7 @@ export function OrderPage() {
                             {item.name}
                           </h3>
                           <span className="font-display text-lg text-kiqao-gold">
-                            RWF ${item.price.toLocaleString()}
+                            RWF {item.price.toLocaleString()}
                           </span>
                         </div>
                         <p className="text-kiqao-cream/60 text-sm mb-6">
@@ -326,7 +326,7 @@ export function OrderPage() {
                             {item.name}
                           </h4>
                           <span className="text-kiqao-gold text-sm">
-                            RWF ${(item.price * item.quantity).toLocaleString()}
+                            RWF {(item.price * item.quantity).toLocaleString()}
                           </span>
                         </div>
                         <div className="flex items-center space-x-3 bg-kiqao-black rounded-sm border border-kiqao-charcoal px-2 py-1">
@@ -363,15 +363,15 @@ export function OrderPage() {
                   <div className="space-y-2 mb-6 text-sm">
                     <div className="flex justify-between text-kiqao-cream/70">
                       <span>Subtotal</span>
-                      <span>RWF ${subtotal.toLocaleString()}</span>
+                      <span>RWF {subtotal.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between text-kiqao-cream/70">
                       <span>Delivery Fee</span>
-                      <span>RWF ${deliveryFee.toLocaleString()}</span>
+                      <span>RWF {deliveryFee.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between text-kiqao-warm-white font-medium pt-2 border-t border-kiqao-charcoal mt-2 text-lg">
                       <span>Total</span>
-                      <span className="text-kiqao-gold">RWF ${total.toLocaleString()}</span>
+                      <span className="text-kiqao-gold">RWF {total.toLocaleString()}</span>
                     </div>
                   </div>
                   <button
@@ -456,7 +456,7 @@ export function OrderPage() {
                                   {item.name}
                                 </h4>
                                 <span className="text-kiqao-gold text-sm">
-                                  RWF ${(item.price * item.quantity).toLocaleString()}
+                                  RWF {(item.price * item.quantity).toLocaleString()}
                                 </span>
                               </div>
                               <div className="flex items-center space-x-3 bg-kiqao-black rounded-sm border border-kiqao-charcoal px-2 py-1">
@@ -555,7 +555,7 @@ export function OrderPage() {
               <div className="p-6 bg-kiqao-charcoal/30 border-t border-kiqao-charcoal">
                     <div className="flex justify-between text-kiqao-warm-white font-medium mb-6 text-lg">
                       <span>Total</span>
-                      <span className="text-kiqao-gold">RWF ${total.toLocaleString()}</span>
+                      <span className="text-kiqao-gold">RWF {total.toLocaleString()}</span>
                     </div>
                     {checkoutStep === 'cart' ?
                 <button

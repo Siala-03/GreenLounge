@@ -12,10 +12,6 @@ import {
 import { PageTransition } from '../components/PageTransition';
 const faqs = [
 {
-  q: 'What is the dress code?',
-  a: 'We recommend smart casual to formal attire. We kindly ask guests to refrain from wearing athletic wear, beachwear, flip-flops, or excessively casual clothing to maintain the elegant atmosphere of the lounge.'
-},
-{
   q: 'Do you accommodate dietary restrictions?',
   a: 'Absolutely! Our kitchen can accommodate most dietary requirements including gluten-free, vegan, and specific allergies. Please inform us when making your reservation so our chef can prepare accordingly.'
 },
@@ -275,17 +271,27 @@ export function ContactPage() {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-kiqao-charcoal h-64 rounded-sm border border-kiqao-gold/20 flex flex-col items-center justify-center relative overflow-hidden group">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                <MapPinIcon className="w-10 h-10 text-kiqao-gold mb-3 relative z-10" />
-                <span className="text-kiqao-warm-white font-display text-lg relative z-10">
-                  View on Maps
-                </span>
-              </div>
+              {/* Map */}
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.450212234567!2d30.0575!3d-1.9536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTcnMTUuMiJTIDMwwrAzNCcxNS4yRw!5e0!3m2!1sen!2srw!4v1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-kiqao-charcoal h-64 rounded-sm border border-kiqao-gold/20 overflow-hidden group hover:border-kiqao-gold/50 transition-colors">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.450212234567!2d30.0575!3d-1.9536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTcnMTUuMiJTIDMwwrAzNCcxNS4yRw!5e0!3m2!1sen!2srw!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Kiqao Lounge Location"
+                  className="w-full h-full"
+                />
+              </a>
 
               <a
-                href="https://wa.me/254700123456"
+                href="https://wa.me/250785023984"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full py-4 bg-[#25D366] text-white font-medium tracking-wider hover:bg-[#128C7E] transition-colors rounded-sm uppercase">
