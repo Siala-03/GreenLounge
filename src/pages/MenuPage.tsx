@@ -107,7 +107,7 @@ const menuData = {
   {
     name: 'Remy Martin Louis XIII',
     desc: 'Ultra-premium cognac, 40% ABV, 70cl',
-    price: 'RWF 15,800,000',
+    price: 'RWF 850,000',
     tags: []
   }],
 

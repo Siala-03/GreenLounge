@@ -30,7 +30,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/kiqaolounge.rw/"
                 className="text-kiqao-cream/60 hover:text-kiqao-gold transition-colors">
                 
                 <InstagramIcon className="w-5 h-5" />

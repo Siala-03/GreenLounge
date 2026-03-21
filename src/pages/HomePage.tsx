@@ -126,7 +126,7 @@ export function HomePage() {
               
               <div className="aspect-[4/5] overflow-hidden rounded-sm">
                 <img
-                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800"
+                  src="https://lh3.googleusercontent.com/p/AF1QipMWv67TxTSzvXCFQ_MV0YLumwkxlRJTODN8Rmhq=s680-w680-h510-rw"
                   alt="Restaurant interior"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
                 
@@ -580,7 +580,7 @@ export function HomePage() {
         <section className="relative py-32 flex items-center justify-center text-center px-4">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920"
+              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweokl7nkQ43kBf1czeS3F-dVHANVdR-lYhtGYuyuSw3STogPTMYtOy0wysNNxaREyGlBSUJh2jqKkMwFaNtoDEg22XMHOo63xyQcOPkuw4dwdxgZSlfCxm9qIlO9YyY5DqOtu7SwBl_h_uzC=s680-w680-h510-rw"
               alt="Elegant restaurant"
               className="w-full h-full object-cover" />
             

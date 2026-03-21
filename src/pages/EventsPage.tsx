@@ -8,7 +8,7 @@ const upcomingEvents = [
   title: 'Wine Tasting Evening',
   date: 'March 28, 2026',
   time: '7:00 PM',
-  price: 'RWF 114,000/person',
+  price: 'RWF 30,000',
   desc: 'Journey through rare Bordeaux vintages guided by our head sommelier.',
   capacity: 'Limited to 30 guests'
 },
@@ -16,7 +16,7 @@ const upcomingEvents = [
   title: 'Jazz & Dine Night',
   date: 'April 5, 2026',
   time: '7:30 PM',
-  price: 'RWF 180,000/person',
+  price: 'RWF 45,000',
   desc: 'Live jazz trio with a curated 5-course tasting menu.',
   capacity: 'Open seating'
 },
@@ -24,7 +24,7 @@ const upcomingEvents = [
   title: "Chef's Table Experience",
   date: 'April 12, 2026',
   time: '8:00 PM',
-  price: 'RWF 240,000/person',
+  price: 'RWF 65,000',
   desc: 'Intimate 8-course journey with Chef Marcus at the kitchen counter.',
   capacity: 'Only 12 seats'
 },
@@ -32,18 +32,18 @@ const upcomingEvents = [
   title: 'Spring Wine Gala',
   date: 'April 20, 2026',
   time: '6:00 PM',
-  price: 'RWF 150,000/person',
+  price: 'RWF 80,000',
   desc: 'Celebrate spring with new additions to our wine collection.',
   capacity: 'Limited to 50 guests'
 }];
 
 const pastEventsImages = [
-'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600',
-'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600',
-'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600',
-'https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600',
-'https://images.unsplash.com/photo-1555244162-803834f70033?w=600',
-'https://images.unsplash.com/photo-1560624052-449f5ddf0c31?w=600'];
+'https://lh3.googleusercontent.com/gps-cs-s/AHVAweokl7nkQ43kBf1czeS3F-dVHANVdR-lYhtGYuyuSw3STogPTMYtOy0wysNNxaREyGlBSUJh2jqKkMwFaNtoDEg22XMHOo63xyQcOPkuw4dwdxgZSlfCxm9qIlO9YyY5DqOtu7SwBl_h_uzC=s680-w680-h510-rw',
+'https://lh3.googleusercontent.com/gps-cs-s/AHVAweqVsOQQFiejgXo3wLI3nc3-5tCq_CnYfCvRnLcgGsYQw0IVTmdIGKM3fjs7DLUipgpkmHHk3D9qfHM2QdEfjiqMqgQfjumKhJSm9iMj10P_kKAbmOCEEcsJQQD27j9_e50_ykBKch-agRDq=s680-w680-h510-rw',
+'https://lh3.googleusercontent.com/p/AF1QipM21yFeKQwYMICtGwpdsT88DocSiRza-IqLF7_G=w141-h235-n-k-no-nu',
+'https://lh3.googleusercontent.com/p/AF1QipMVo7ZrpWik9kkW-K8BTzsIfZSI05qP10ICqPHo=w141-h118-n-k-no-nu',
+'https://lh3.googleusercontent.com/gps-cs-s/AHVAwepp40HOIUBuq-WaOQL-FZBq09_-tNdieL6py0LakSxWnVLXgwMeYF3yO0943_I4qhOz5TRWO8NTOxiFRrM6kICSbgoWh6R1k0i6yZImbKdrNgP0yN9cG6gUsSSpTWk67lBS90QH2ZT8L0tC=w141-h118-n-k-no-nu',
+'https://lh3.googleusercontent.com/gps-cs-s/AHVAwerhovdT9IAiPP7PEqLdvQSGBwp9OFzjMSGb3uwUFx94w20rytpxquf_RpKz6DKerlexPO8anOr-w9RftMzvrRd4QfZ6JbuYKnQRdfaRkKXxu6K4WOnqCSiwWB2j4knwu1Wvw02-yZcCfy_l=w141-h176-n-k-no-nu'];
 
 export function EventsPage() {
   return (
