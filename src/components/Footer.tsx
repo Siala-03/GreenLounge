@@ -82,16 +82,8 @@ export function Footer() {
             </h4>
             <ul className="space-y-4 text-sm text-kiqao-cream/70">
               <li className="flex justify-between">
-                <span>Mon - Thu</span>
-                <span>5:00 PM - 11:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Fri - Sat</span>
-                <span>5:00 PM - 1:00 AM</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sunday</span>
-                <span>4:00 PM - 10:00 PM</span>
+                <span>Mon - Sun</span>
+                <span>11:00 AM - Late</span>
               </li>
             </ul>
           </div>
@@ -102,9 +94,9 @@ export function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-4 text-sm text-kiqao-cream/70 mb-8">
-              <li>123 Wine Avenue, Gourmet District</li>
-              <li>+254 700 123 456</li>
-              <li>hello@kiqaolounge.com</li>
+              <li>Nyarutarama KG 274 St, Kigali, Rwanda</li>
+              <li>+250 785 023 984</li>
+              <li>info@kiqaolounge.com</li>
             </ul>
             <form className="flex" onSubmit={(e) => e.preventDefault()}>
               <input

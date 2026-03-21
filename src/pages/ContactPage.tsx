@@ -235,9 +235,9 @@ export function ContactPage() {
                         Location
                       </h4>
                       <p className="text-kiqao-cream/70">
-                        123 Wine Avenue
+                        Nyarutarama KG 274 St
                         <br />
-                        Gourmet District, Nairobi
+                        Kigali, Rwanda
                       </p>
                     </div>
                   </div>
@@ -247,7 +247,7 @@ export function ContactPage() {
                       <h4 className="text-kiqao-warm-white font-medium mb-1">
                         Phone
                       </h4>
-                      <p className="text-kiqao-cream/70">+254 700 123 456</p>
+                      <p className="text-kiqao-cream/70">+250 785 023 984</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -257,7 +257,7 @@ export function ContactPage() {
                         Email
                       </h4>
                       <p className="text-kiqao-cream/70">
-                        hello@kiqaolounge.com
+                        info@kiqaolounge.com
                       </p>
                     </div>
                   </div>
@@ -268,11 +268,7 @@ export function ContactPage() {
                         Hours
                       </h4>
                       <p className="text-kiqao-cream/70">
-                        Mon-Thu: 5PM - 11PM
-                        <br />
-                        Fri-Sat: 5PM - 1AM
-                        <br />
-                        Sun: 4PM - 10PM
+                        Mon-Sun: 11:00 AM - Late
                       </p>
                     </div>
                   </div>
