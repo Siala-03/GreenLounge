@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
 type MenuCategory = 'Starters' | 'Mains' | 'Liquor' | 'Desserts' | 'Wine List';
@@ -195,7 +195,7 @@ export function MenuPage() {
     <PageTransition>
       <main className="flex-grow bg-kiqao-black text-kiqao-cream min-h-screen">
         {/* Hero Banner */}
-        <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
+        <section className="inner-hero">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920"
@@ -238,9 +238,9 @@ export function MenuPage() {
         </section>
 
         {/* Menu Content */}
-        <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="page-section max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-16 border-b border-kiqao-charcoal pb-6">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-8 mb-12 md:mb-16 border-b border-white/10 pb-5 md:pb-6">
             {categories.map((cat) =>
             <button
               key={cat}
@@ -278,7 +278,7 @@ export function MenuPage() {
                 transition={{
                   duration: 0.4
                 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 md:gap-y-12">
                 
                 {menuData[activeCategory].map((item, idx) =>
                 <div key={idx} className="flex flex-col">
@@ -298,7 +298,7 @@ export function MenuPage() {
                           </span>
                       }
                       </h3>
-                      <div className="flex-grow border-b border-dotted border-kiqao-charcoal mx-4 relative top-[-6px]"></div>
+                      <div className="flex-grow border-b border-dotted border-white/10 mx-4 relative top-[-6px]"></div>
                       <span className="font-display text-xl text-kiqao-gold">
                         {item.price}
                       </span>
@@ -313,7 +313,7 @@ export function MenuPage() {
           </div>
 
           {/* Dietary Legend */}
-          <div className="mt-24 text-center border-t border-kiqao-charcoal pt-8">
+          <div className="mt-24 text-center border-t border-white/10 pt-8">
             <p className="text-kiqao-cream/50 text-xs tracking-widest uppercase flex justify-center gap-6">
               <span>V = Vegetarian</span>
               <span>GF = Gluten Free</span>

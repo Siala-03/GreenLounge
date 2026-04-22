@@ -1,11 +1,13 @@
-import React, { Children } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   WineIcon,
   StarIcon,
   ArrowRightIcon,
-  ChevronDownIcon } from
+  ChevronDownIcon,
+  Clock3Icon,
+  MapPinIcon,
+  PhoneIcon } from
 'lucide-react';
 import { PageTransition } from '../components/PageTransition';
 const fadeInUp = {
@@ -38,81 +40,100 @@ export function HomePage() {
     <PageTransition>
       <main className="flex-grow bg-kiqao-black text-kiqao-cream">
         {/* SECTION A: HERO */}
-        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920"
               alt="Fine dining atmosphere"
-              className="w-full h-full object-cover object-center" />
-            
-            <div className="absolute inset-0 bg-gradient-to-b from-kiqao-black/80 via-kiqao-black/60 to-kiqao-black/90"></div>
+              className="w-full h-full object-cover object-center scale-105" />
+            <div className="absolute inset-0 hero-overlay"></div>
           </div>
 
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+          {/* Decorative top vignette */}
+          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-kiqao-black to-transparent z-10 pointer-events-none"></div>
+
+          <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-16">
             <motion.div
               variants={staggerContainer}
               initial="hidden"
               animate="visible"
-              className="space-y-8">
-              
+              className="space-y-6">
+
+              <motion.p variants={fadeInUp} className="eyebrow">
+                SilverBack Mall Rooftop · Kicukiro, Kigali
+              </motion.p>
+
               <motion.h1
                 variants={fadeInUp}
-                className="font-display text-5xl md:text-7xl lg:text-8xl text-kiqao-warm-white leading-tight">
-                
-                Where Every Sip <br className="hidden md:block" />
-                <span className="text-kiqao-gold italic">Tells a Story</span>
+                className="font-display text-6xl md:text-8xl lg:text-9xl text-kiqao-emerald leading-[0.9] tracking-tight">
+
+                The Green<br />
+                <span className="italic">Lounge</span>
               </motion.h1>
 
               <motion.p
                 variants={fadeInUp}
-                className="text-lg md:text-xl text-kiqao-cream/90 max-w-2xl mx-auto font-light tracking-wide">
-                
-                Experience the art of fine dining and curated wines in an
-                atmosphere of timeless elegance
+                className="text-base md:text-lg text-kiqao-cream/75 max-w-xl mx-auto font-light tracking-widest uppercase pt-2">
+                Fine Dining · Craft Cocktails · Premium Wines
               </motion.p>
 
               <motion.div
                 variants={fadeInUp}
-                className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                
+                className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+
                 <Link
                   to="/reservations"
-                  className="w-full sm:w-auto px-8 py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-champagne transition-colors rounded-sm text-center">
-                  
+                  className="w-full sm:w-auto px-10 py-4 bg-kiqao-gold text-kiqao-black font-semibold tracking-[0.12em] uppercase text-sm hover:bg-kiqao-emerald hover:text-white transition-all rounded-none text-center shadow-gold hover:shadow-gold-lg">
                   Reserve a Table
                 </Link>
                 <Link
                   to="/menu"
-                  className="w-full sm:w-auto px-8 py-4 border border-kiqao-gold text-kiqao-gold font-medium tracking-wider hover:bg-kiqao-gold/10 transition-colors rounded-sm text-center">
-                  
-                  Explore Menu
+                  className="w-full sm:w-auto px-10 py-4 border border-white/30 text-white font-medium tracking-[0.12em] uppercase text-sm hover:border-kiqao-emerald hover:text-kiqao-emerald transition-all rounded-none text-center">
+                  View Menu
                 </Link>
+              </motion.div>
+
+              <motion.div
+                variants={fadeInUp}
+                className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto pt-4 text-left">
+                <div className="info-chip">
+                  <MapPinIcon className="w-4 h-4 text-kiqao-emerald flex-shrink-0" />
+                  <div>
+                    <p className="text-[0.65rem] uppercase tracking-[0.22em] text-kiqao-cream/45">Location</p>
+                    <p className="text-sm text-kiqao-warm-white">SilverBack Mall Rooftop</p>
+                  </div>
+                </div>
+                <div className="info-chip">
+                  <Clock3Icon className="w-4 h-4 text-kiqao-emerald flex-shrink-0" />
+                  <div>
+                    <p className="text-[0.65rem] uppercase tracking-[0.22em] text-kiqao-cream/45">Hours</p>
+                    <p className="text-sm text-kiqao-warm-white">Open daily, 11:00 AM till late</p>
+                  </div>
+                </div>
+                <a href="tel:+250788331660" className="info-chip group">
+                  <PhoneIcon className="w-4 h-4 text-kiqao-emerald flex-shrink-0" />
+                  <div>
+                    <p className="text-[0.65rem] uppercase tracking-[0.22em] text-kiqao-cream/45">Reservations</p>
+                    <p className="text-sm text-kiqao-warm-white group-hover:text-kiqao-emerald transition-colors">+250788 331 660</p>
+                  </div>
+                </a>
               </motion.div>
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{
-              opacity: 0
-            }}
-            animate={{
-              opacity: 1
-            }}
-            transition={{
-              delay: 1.5,
-              duration: 1
-            }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-kiqao-gold animate-bounce">
-            
-            <span className="text-xs tracking-widest uppercase mb-2">
-              Scroll
-            </span>
-            <ChevronDownIcon className="w-5 h-5" />
-          </motion.div>
+          <motion.a
+            href="#story"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.8, duration: 1 }}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-kiqao-emerald/70 z-20 hover:text-kiqao-emerald transition-colors">
+            <span className="text-[0.6rem] tracking-[0.35em] uppercase mb-2">Scroll</span>
+            <ChevronDownIcon className="w-4 h-4 animate-bounce" />
+          </motion.a>
         </section>
 
         {/* SECTION B: ABOUT/STORY */}
-        <section className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section id="story" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial="hidden"
@@ -124,16 +145,15 @@ export function HomePage() {
               variants={fadeInUp}
               className="relative">
               
-              <div className="aspect-[4/5] overflow-hidden rounded-sm">
+              <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src="https://lh3.googleusercontent.com/p/AF1QipMWv67TxTSzvXCFQ_MV0YLumwkxlRJTODN8Rmhq=s680-w680-h510-rw"
                   alt="Restaurant interior"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
-                
               </div>
-              <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-kiqao-charcoal border border-kiqao-gold/30 hidden md:flex items-center justify-center p-6 rounded-sm">
-                <p className="font-display text-2xl text-kiqao-gold text-center italic">
-                  "A sanctuary for food and wine lovers."
+              <div className="absolute -bottom-8 -right-8 w-52 h-52 bg-kiqao-black border border-kiqao-gold/40 hidden md:flex items-center justify-center p-6 shadow-gold">
+                <p className="font-display text-xl text-kiqao-gold text-center italic leading-snug">
+                  "Kigali's finest<br/>rooftop experience."
                 </p>
               </div>
             </motion.div>
@@ -149,47 +169,45 @@ export function HomePage() {
               className="space-y-8">
               
               <motion.div variants={fadeInUp}>
-                <span className="text-kiqao-gold text-sm font-bold tracking-[0.2em] uppercase">
-                  Our Story
-                </span>
-                <h2 className="font-display text-4xl md:text-5xl text-kiqao-warm-white mt-4 mb-6">
-                  A Legacy of Culinary Excellence
+                <p className="eyebrow mb-4">Our Story</p>
+                <h2 className="font-display text-4xl md:text-5xl text-kiqao-warm-white mt-0 mb-6">
+                  Above the City, Beyond Ordinary
                 </h2>
-                <div className="w-16 h-0.5 bg-kiqao-gold mb-8"></div>
+                <div className="w-10 h-0.5 bg-kiqao-emerald mb-8 opacity-70"></div>
                 <p className="text-kiqao-cream/80 leading-relaxed mb-6">
-                  Established with a profound passion for bringing world-class
-                  dining experiences to our city, Kiqao Lounge is more than a
-                  restaurant—it's a destination.
+                  Perched on the rooftop of SilverBack Mall in Kicukiro, The Green
+                  Lounge is Kigali's premier destination for those who demand the
+                  finest. Whether you're unwinding after hours, hosting a business
+                  dinner, or celebrating life's milestones, we set the stage.
                 </p>
                 <p className="text-kiqao-cream/80 leading-relaxed">
-                  Our executive chef meticulously sources the finest seasonal
-                  ingredients to craft dishes that honor traditional techniques
-                  while embracing modern culinary innovation. Paired with our
-                  extensive, carefully curated wine cellar, every meal becomes
-                  an unforgettable journey of flavors.
+                  Our kitchen delivers an inspired menu of carefully crafted dishes
+                  while our bar team curates cocktails and a world-class wine
+                  selection. Indoors or on the open-air terrace — every visit is
+                  an experience worth savouring.
                 </p>
               </motion.div>
 
               <motion.div
                 variants={fadeInUp}
-                className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-kiqao-charcoal">
+                className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-white/10">
                 
                 {[
                 {
-                  label: 'Years',
-                  value: '15+'
-                },
-                {
-                  label: 'Wines',
-                  value: '200+'
-                },
-                {
-                  label: 'Dishes',
-                  value: '50+'
-                },
-                {
-                  label: 'Guests',
+                  label: 'Happy Guests',
                   value: '10K+'
+                },
+                {
+                  label: 'Wines & Spirits',
+                  value: '100+'
+                },
+                {
+                  label: 'Signature Dishes',
+                  value: '40+'
+                },
+                {
+                  label: 'Events Hosted',
+                  value: '200+'
                 }].
                 map((stat, i) =>
                 <div key={i} className="text-center sm:text-left">
@@ -212,22 +230,19 @@ export function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{
-                once: true
-              }}
+              viewport={{ once: true }}
               variants={fadeInUp}
               className="text-center mb-16">
-              
-              <span className="text-kiqao-gold text-sm font-bold tracking-[0.2em] uppercase">
-                Chef's Selection
-              </span>
-              <h2 className="font-display text-4xl md:text-5xl text-kiqao-warm-white mt-4">
+              <p className="eyebrow mb-5">Chef's Selection</p>
+              <h2 className="font-display text-4xl md:text-5xl text-kiqao-warm-white">
                 Signature Creations
               </h2>
-              <div className="w-16 h-0.5 bg-kiqao-gold mx-auto mt-8"></div>
+              <div className="gold-rule max-w-xs mx-auto mt-8">
+                <span className="text-kiqao-gold/60 text-xs tracking-widest">✦</span>
+              </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               {[
               {
                 name: 'Filet Mignon',
@@ -237,51 +252,40 @@ export function HomePage() {
               },
               {
                 name: 'Grilled Chicken',
-                desc: 'With herbs and roasted vegetables',
+                desc: 'With fresh herbs and roasted seasonal vegetables',
                 price: 'RWF 40,000',
                 img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweq61k1h1hlohu7nNEBfnkiD6XuIIdf7T_5HftSChXj5uFM747zTgR4HJJR9cWqB4CTHfE3r8k5jrx2eg2SmmQmQ0KMsotKhL02PFbxEo3E7l4KcEERf3FitW5yOtmhv1LVTU_YP=w243-h406-n-k-no-nu'
               },
               {
                 name: 'Mushroom Risotto',
-                desc: 'Creamy arborio rice with wild mushrooms',
+                desc: 'Creamy arborio rice with wild mushrooms and parmesan',
                 price: 'RWF 30,000',
                 img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweodshvNWigwxSsTSWM_oR1H5ZBwLihJ7jv0NtU3BFA7NIH4T-XxyNGMQ_gtYkcACHj0Mcd9O8znoilg_OVAYToNzDhB4-IpUP4jZhDFr_NdodoXccE292655bcDQ04uQvYotrQFER-DF_Cd=w243-h174-n-k-no-nu'
               }].
               map((dish, i) =>
               <motion.div
                 key={i}
-                initial={{
-                  opacity: 0,
-                  y: 30
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0
-                }}
-                viewport={{
-                  once: true
-                }}
-                transition={{
-                  delay: i * 0.2,
-                  duration: 0.6
-                }}
-                className="bg-kiqao-charcoal rounded-sm overflow-hidden group border border-kiqao-gold/10 hover:border-kiqao-gold/30 transition-colors">
-                
-                  <div className="relative h-64 overflow-hidden">
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.6 }}
+                className="card-luxury overflow-hidden group">
+
+                  <div className="relative h-72 overflow-hidden">
                     <img
                     src={dish.img}
                     alt={dish.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  
-                    <div className="absolute top-4 right-4 bg-kiqao-black/80 backdrop-blur-sm text-kiqao-gold px-4 py-2 font-display text-lg rounded-sm border border-kiqao-gold/20">
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute top-4 right-4 bg-kiqao-black/90 backdrop-blur-sm text-kiqao-gold px-3 py-1.5 font-display text-base border border-kiqao-gold/30">
                       {dish.price}
                     </div>
                   </div>
-                  <div className="p-8 text-center">
-                    <h3 className="font-display text-2xl text-kiqao-warm-white mb-3">
+                  <div className="p-7 text-center border-t border-white/6">
+                    <h3 className="font-display text-2xl text-kiqao-warm-white mb-2">
                       {dish.name}
                     </h3>
-                    <p className="text-kiqao-cream/70 text-sm">{dish.desc}</p>
+                    <p className="text-kiqao-cream/55 text-sm leading-relaxed">{dish.desc}</p>
                   </div>
                 </motion.div>
               )}
@@ -290,7 +294,7 @@ export function HomePage() {
             <div className="text-center">
               <Link
                 to="/menu"
-                className="inline-flex items-center text-kiqao-gold hover:text-kiqao-champagne transition-colors group tracking-wide uppercase text-sm font-medium">
+                className="inline-flex items-center text-kiqao-emerald hover:text-kiqao-champagne transition-colors group tracking-wide uppercase text-sm font-medium">
                 
                 View Full Menu
                 <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -323,48 +327,48 @@ export function HomePage() {
                 <motion.h2
                   variants={fadeInUp}
                   className="font-display text-4xl md:text-5xl text-kiqao-warm-white mb-6">
-                  
-                  Curated Wine Collection
+
+                  Cocktails, Wines & Spirits
                 </motion.h2>
                 <motion.div
                   variants={fadeInUp}
-                  className="w-16 h-0.5 bg-kiqao-gold mb-8">
+                  className="w-12 h-px bg-kiqao-emerald mb-8 opacity-80">
                 </motion.div>
                 <motion.p
                   variants={fadeInUp}
                   className="text-kiqao-cream/80 leading-relaxed mb-10 text-lg">
-                  
-                  Our cellar houses over 200 carefully selected labels from the
-                  world's most renowned vineyards. Whether you prefer a bold
-                  Bordeaux, a crisp Chablis, or a rare vintage Champagne, our
-                  sommelier is ready to guide your selection.
+
+                  From bespoke craft cocktails to an impressive cellar of wines
+                  and premium spirits, our bar is the heartbeat of The Green
+                  Lounge. Our mixologists and sommelier are on hand to guide
+                  your perfect pour — every time.
                 </motion.p>
                 <motion.div variants={fadeInUp}>
                   <Link
                     to="/menu"
-                    className="inline-block px-8 py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-champagne transition-colors rounded-sm">
-                    
-                    Explore Our Wine List
+                    className="inline-block px-8 py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-emerald hover:text-white transition-all rounded-sm shadow-gold-sm hover:shadow-gold">
+
+                    View Full Menu
                   </Link>
                 </motion.div>
               </motion.div>
               <div className="grid grid-cols-2 gap-6">
                 {[
                 {
-                  name: 'Red Wines',
-                  count: '85+ Labels'
+                  name: 'Craft Cocktails',
+                  count: 'Signature & Classic'
                 },
                 {
-                  name: 'White Wines',
-                  count: '60+ Labels'
+                  name: 'Fine Wines',
+                  count: '100+ Labels'
                 },
                 {
-                  name: 'Rosé',
-                  count: '25+ Labels'
+                  name: 'Premium Spirits',
+                  count: 'Whisky, Gin & More'
                 },
                 {
                   name: 'Champagne',
-                  count: '30+ Labels'
+                  count: 'Curated Selection'
                 }].
                 map((category, i) =>
                 <motion.div
@@ -386,7 +390,7 @@ export function HomePage() {
                   }}
                   className="bg-kiqao-charcoal/60 border border-kiqao-gold/20 p-8 rounded-sm text-center hover:bg-kiqao-charcoal transition-colors backdrop-blur-md">
                   
-                    <WineIcon className="w-8 h-8 text-kiqao-gold mx-auto mb-4" />
+                    <WineIcon className="w-8 h-8 text-kiqao-emerald mx-auto mb-4" />
                     <h3 className="font-display text-xl text-kiqao-warm-white mb-2">
                       {category.name}
                     </h3>
@@ -411,10 +415,8 @@ export function HomePage() {
                 }}
                 variants={fadeInUp}>
                 
-                <span className="text-kiqao-gold text-sm font-bold tracking-[0.2em] uppercase">
-                  Join Us
-                </span>
-                <h2 className="font-display text-4xl md:text-5xl text-kiqao-warm-white mt-4">
+                <p className="eyebrow mb-4">Join Us</p>
+                <h2 className="font-display text-4xl md:text-5xl text-kiqao-warm-white mt-0">
                   Upcoming Experiences
                 </h2>
               </motion.div>
@@ -432,7 +434,7 @@ export function HomePage() {
                 
                 <Link
                   to="/events"
-                  className="inline-flex items-center text-kiqao-gold hover:text-kiqao-champagne transition-colors group tracking-wide uppercase text-sm font-medium">
+                  className="inline-flex items-center text-kiqao-emerald hover:text-kiqao-champagne transition-colors group tracking-wide uppercase text-sm font-medium">
                   
                   View All Events
                   <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -475,9 +477,9 @@ export function HomePage() {
                   delay: i * 0.2,
                   duration: 0.6
                 }}
-                className="group relative bg-kiqao-rich-black border border-kiqao-charcoal p-8 rounded-sm hover:border-kiqao-gold/50 transition-colors">
+                className="group relative bg-kiqao-rich-black border border-kiqao-gold/15 p-8 rounded-sm hover:border-kiqao-gold/45 hover:shadow-gold-sm transition-all">
                 
-                  <div className="text-kiqao-gold text-sm font-medium tracking-wider mb-4">
+                  <div className="text-kiqao-emerald text-sm font-medium tracking-wider mb-4">
                     {event.date}
                   </div>
                   <h3 className="font-display text-2xl text-kiqao-warm-white mb-4">
@@ -488,7 +490,7 @@ export function HomePage() {
                   </p>
                   <Link
                   to="/events"
-                  className="text-kiqao-gold text-sm uppercase tracking-wider font-medium flex items-center group-hover:text-kiqao-champagne">
+                  className="text-kiqao-emerald text-sm uppercase tracking-wider font-medium flex items-center group-hover:text-kiqao-champagne">
                   
                     Learn More{' '}
                     <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -523,17 +525,17 @@ export function HomePage() {
               {[
               {
                 quote:
-                'An extraordinary dining experience. The wine pairing was impeccable and the ambiance is unmatched.',
+                'The rooftop view, the cocktails, the food — everything was perfect. The Green Lounge is on another level in Kigali.',
                 name: 'Sarah M.'
               },
               {
                 quote:
-                'Kiqao Lounge has become our go-to for special occasions. Every visit feels like a celebration.',
+                'Our go-to spot for client dinners and special occasions. The ambiance, service, and food never disappoint.',
                 name: 'James K.'
               },
               {
                 quote:
-                "The Chef's Table experience was unforgettable. Truly world-class cuisine in a stunning setting.",
+                "Best lounge in Kigali, full stop. The vibe is unmatched and the cocktails are crafted with real care.",
                 name: 'Amara O.'
               }].
               map((testimonial, i) =>
@@ -567,7 +569,7 @@ export function HomePage() {
                   <p className="text-kiqao-cream/90 italic mb-8 leading-relaxed">
                     "{testimonial.quote}"
                   </p>
-                  <p className="font-display text-kiqao-gold text-lg">
+                  <p className="font-display text-kiqao-emerald text-lg">
                     — {testimonial.name}
                   </p>
                 </motion.div>
@@ -599,15 +601,15 @@ export function HomePage() {
             <motion.h2
               variants={fadeInUp}
               className="font-display text-4xl md:text-6xl text-kiqao-warm-white mb-6">
-              
-              Reserve Your Experience
+
+              Secure Your Table Tonight
             </motion.h2>
             <motion.p
               variants={fadeInUp}
               className="text-xl text-kiqao-cream/80 mb-10 font-light">
-              
-              Join us for an unforgettable evening of fine dining and
-              exceptional wines
+
+              Join Kigali's finest rooftop lounge for an evening of great
+              food, premium drinks, and unforgettable atmosphere
             </motion.p>
             <motion.div
               variants={fadeInUp}
@@ -615,13 +617,13 @@ export function HomePage() {
               
               <Link
                 to="/reservations"
-                className="px-8 py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-champagne transition-colors rounded-sm">
-                
+                className="px-8 py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-emerald hover:text-white transition-all rounded-sm shadow-gold-sm hover:shadow-gold">
+
                 Book a Table
               </Link>
               <a
-                href="tel:+250785023984"
-                className="px-8 py-4 border border-kiqao-gold text-kiqao-gold font-medium tracking-wider hover:bg-kiqao-gold/10 transition-colors rounded-sm">
+                href="tel:+250788331660"
+                className="px-8 py-4 border border-kiqao-gold text-kiqao-gold font-medium tracking-wider hover:bg-kiqao-emerald hover:border-kiqao-emerald hover:text-white transition-colors rounded-sm">
                 
                 Call Us
               </a>

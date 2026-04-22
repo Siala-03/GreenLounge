@@ -44,7 +44,7 @@ export function ReservationsPage() {
     <PageTransition>
       <main className="flex-grow bg-kiqao-black text-kiqao-cream min-h-screen">
         {/* Hero Banner */}
-        <section className="relative h-[30vh] min-h-[300px] flex items-center justify-center">
+        <section className="inner-hero">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=1920"
@@ -70,7 +70,7 @@ export function ReservationsPage() {
           </div>
         </section>
 
-        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="page-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Form Section */}
             <div className="lg:col-span-3">
@@ -110,7 +110,7 @@ export function ReservationsPage() {
                       requests: ''
                     });
                   }}
-                  className="px-8 py-3 border border-kiqao-gold text-kiqao-gold hover:bg-kiqao-gold hover:text-kiqao-black transition-colors rounded-sm uppercase tracking-wider text-sm">
+                  className="px-8 py-3 border border-kiqao-gold text-kiqao-gold hover:bg-kiqao-emerald hover:border-kiqao-emerald hover:text-white transition-colors rounded-sm uppercase tracking-wider text-sm">
                   
                     Make Another Booking
                   </button>
@@ -126,9 +126,9 @@ export function ReservationsPage() {
                   y: 0
                 }}
                 onSubmit={handleSubmit}
-                className="bg-kiqao-rich-black border border-kiqao-charcoal p-8 md:p-10 rounded-sm">
+                className="bg-kiqao-rich-black border border-kiqao-gold/20 p-6 md:p-10 rounded-sm reveal-panel">
                 
-                  <h2 className="font-display text-2xl text-kiqao-warm-white mb-8 border-b border-kiqao-charcoal pb-4">
+                  <h2 className="font-display text-2xl text-kiqao-warm-white mb-8 border-b border-white/10 pb-4">
                     Booking Details
                   </h2>
 
@@ -143,7 +143,7 @@ export function ReservationsPage() {
                       required
                       value={formData.date}
                       onChange={handleChange}
-                      className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
+                      className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
                     
                     </div>
                     <div>
@@ -155,7 +155,7 @@ export function ReservationsPage() {
                       required
                       value={formData.time}
                       onChange={handleChange}
-                      className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
+                      className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
                       
                         <option value="" disabled>
                           Select a time
@@ -179,7 +179,7 @@ export function ReservationsPage() {
                       required
                       value={formData.partySize}
                       onChange={handleChange}
-                      className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
+                      className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
                       
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, '12+'].map(
                         (num) =>
@@ -198,7 +198,7 @@ export function ReservationsPage() {
                       name="occasion"
                       value={formData.occasion}
                       onChange={handleChange}
-                      className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
+                      className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
                       
                         <option value="None">None</option>
                         <option value="Birthday">Birthday</option>
@@ -209,7 +209,7 @@ export function ReservationsPage() {
                     </div>
                   </div>
 
-                  <h2 className="font-display text-2xl text-kiqao-warm-white mb-8 border-b border-kiqao-charcoal pb-4">
+                  <h2 className="font-display text-2xl text-kiqao-warm-white mb-8 border-b border-white/10 pb-4">
                     Guest Information
                   </h2>
 
@@ -224,7 +224,7 @@ export function ReservationsPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm"
+                      className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm"
                       placeholder="John Doe" />
                     
                     </div>
@@ -238,7 +238,7 @@ export function ReservationsPage() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm"
+                      className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm"
                       placeholder="+254 700 000 000" />
                     
                     </div>
@@ -254,7 +254,7 @@ export function ReservationsPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm"
+                    className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm"
                     placeholder="john@example.com" />
                   
                   </div>
@@ -268,7 +268,7 @@ export function ReservationsPage() {
                     value={formData.requests}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm resize-none"
+                    className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm resize-none"
                     placeholder="Dietary requirements, seating preferences, etc.">
                   </textarea>
                   </div>
@@ -276,7 +276,7 @@ export function ReservationsPage() {
                   <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-champagne transition-colors rounded-sm uppercase disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center">
+                  className="w-full py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-emerald hover:text-white transition-all rounded-sm uppercase disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center shadow-gold-sm hover:shadow-gold">
                   
                     {isSubmitting ?
                   <span className="animate-pulse">Processing...</span> :
@@ -308,14 +308,14 @@ export function ReservationsPage() {
                 
               </div>
 
-              <div className="bg-kiqao-rich-black border border-kiqao-charcoal p-8 rounded-sm">
+              <div className="bg-kiqao-rich-black border border-kiqao-gold/20 p-8 rounded-sm">
                 <h3 className="font-display text-xl text-kiqao-warm-white mb-6">
                   Important Information
                 </h3>
 
                 <div className="space-y-6 text-sm">
                   <div>
-                    <h4 className="text-kiqao-gold uppercase tracking-wider mb-2 text-xs">
+                    <h4 className="text-kiqao-emerald uppercase tracking-wider mb-2 text-xs">
                       Cancellation Policy
                     </h4>
                     <p className="text-kiqao-cream/80">
@@ -325,7 +325,7 @@ export function ReservationsPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-kiqao-gold uppercase tracking-wider mb-2 text-xs">
+                    <h4 className="text-kiqao-emerald uppercase tracking-wider mb-2 text-xs">
                       Large Parties
                     </h4>
                     <p className="text-kiqao-cream/80">
@@ -342,14 +342,14 @@ export function ReservationsPage() {
                 </h4>
                 <div className="flex flex-col gap-4">
                   <a
-                    href="tel:+250785023984"
+                    href="tel:+250788331660"
                     className="flex items-center justify-center text-kiqao-cream hover:text-kiqao-gold transition-colors">
                     
                     <PhoneIcon className="w-4 h-4 mr-2" />
-                    +254 700 123 456
+                    +250788 331 660
                   </a>
                   <a
-                    href="https://wa.me/250785023984"
+                    href="https://wa.me/250788331660"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center text-green-400 hover:text-green-300 transition-colors">

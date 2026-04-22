@@ -53,7 +53,7 @@ export function ContactPage() {
     <PageTransition>
       <main className="flex-grow bg-kiqao-black text-kiqao-cream min-h-screen">
         {/* Hero Banner */}
-        <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
+        <section className="inner-hero">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1920"
@@ -88,14 +88,14 @@ export function ContactPage() {
               transition={{
                 delay: 0.2
               }}
-              className="text-kiqao-gold tracking-widest uppercase text-sm">
-              
-              We'd love to hear from you
+              className="eyebrow">
+
+              SilverBack Mall Rooftop · Kicukiro, Kigali
             </motion.p>
           </div>
         </section>
 
-        <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="page-section-lg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
             {/* Contact Form */}
             <motion.div
@@ -107,7 +107,7 @@ export function ContactPage() {
                 opacity: 1,
                 x: 0
               }}
-              className="bg-kiqao-rich-black border border-kiqao-charcoal p-8 md:p-10 rounded-sm">
+              className="bg-kiqao-rich-black border border-kiqao-gold/20 p-6 md:p-10 rounded-sm reveal-panel">
               
               <h2 className="font-display text-3xl text-kiqao-warm-white mb-8">
                 Send a Message
@@ -138,7 +138,7 @@ export function ContactPage() {
                       name: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
+                    className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
                   
                   </div>
                   <div>
@@ -155,7 +155,7 @@ export function ContactPage() {
                       email: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
+                    className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm" />
                   
                   </div>
                   <div>
@@ -170,7 +170,7 @@ export function ContactPage() {
                       subject: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
+                    className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm appearance-none">
                     
                       <option>General Inquiry</option>
                       <option>Reservation Issue</option>
@@ -193,13 +193,13 @@ export function ContactPage() {
                       message: e.target.value
                     })
                     }
-                    className="w-full bg-kiqao-black border border-kiqao-charcoal text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm resize-none">
+                    className="w-full bg-kiqao-black border border-white/10 text-kiqao-cream px-4 py-3 focus:outline-none focus:border-kiqao-gold transition-colors rounded-sm resize-none">
                   </textarea>
                   </div>
                   <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-champagne transition-colors rounded-sm uppercase disabled:opacity-70 flex justify-center">
+                  className="w-full py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-emerald hover:text-white transition-colors rounded-sm uppercase disabled:opacity-70 flex justify-center">
                   
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
@@ -225,29 +225,29 @@ export function ContactPage() {
                 </h2>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <MapPinIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <MapPinIcon className="w-6 h-6 text-kiqao-emerald mr-4 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-kiqao-warm-white font-medium mb-1">
                         Location
                       </h4>
                       <p className="text-kiqao-cream/70">
-                        Nyarutarama KG 274 St
+                        SilverBack Mall Rooftop
                         <br />
-                        Kigali, Rwanda
+                        Kicukiro Sonatube, Kigali
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <PhoneIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <PhoneIcon className="w-6 h-6 text-kiqao-emerald mr-4 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-kiqao-warm-white font-medium mb-1">
                         Phone
                       </h4>
-                      <p className="text-kiqao-cream/70">+250 785 023 984</p>
+                      <p className="text-kiqao-cream/70">+250788 331 660</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <MailIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <MailIcon className="w-6 h-6 text-kiqao-emerald mr-4 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-kiqao-warm-white font-medium mb-1">
                         Email
@@ -258,7 +258,7 @@ export function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <ClockIcon className="w-6 h-6 text-kiqao-gold mr-4 flex-shrink-0 mt-1" />
+                    <ClockIcon className="w-6 h-6 text-kiqao-emerald mr-4 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-kiqao-warm-white font-medium mb-1">
                         Hours
@@ -285,13 +285,13 @@ export function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Kiqao Lounge Location"
+                  title="The Green Lounge Location"
                   className="w-full h-full"
                 />
               </a>
 
               <a
-                href="https://wa.me/250785023984"
+                href="https://wa.me/250788331660"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full py-4 bg-[#25D366] text-white font-medium tracking-wider hover:bg-[#128C7E] transition-colors rounded-sm uppercase">
@@ -308,14 +308,14 @@ export function ContactPage() {
               <h2 className="font-display text-4xl text-kiqao-warm-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <div className="w-16 h-0.5 bg-kiqao-gold mx-auto"></div>
+              <div className="w-12 h-px bg-kiqao-emerald mx-auto opacity-80"></div>
             </div>
 
             <div className="space-y-4">
               {faqs.map((faq, idx) =>
               <div
                 key={idx}
-                className="bg-kiqao-rich-black border border-kiqao-charcoal rounded-sm overflow-hidden">
+                className="bg-kiqao-rich-black border border-kiqao-gold/20 rounded-sm overflow-hidden">
                 
                   <button
                   onClick={() =>
@@ -327,9 +327,9 @@ export function ContactPage() {
                       {faq.q}
                     </span>
                     {openFaqIndex === idx ?
-                  <ChevronUpIcon className="w-5 h-5 text-kiqao-gold flex-shrink-0" /> :
+                  <ChevronUpIcon className="w-5 h-5 text-kiqao-emerald flex-shrink-0" /> :
 
-                  <ChevronDownIcon className="w-5 h-5 text-kiqao-gold flex-shrink-0" />
+                  <ChevronDownIcon className="w-5 h-5 text-kiqao-emerald flex-shrink-0" />
                   }
                   </button>
                   <AnimatePresence>
@@ -351,7 +351,7 @@ export function ContactPage() {
                       duration: 0.3
                     }}>
                     
-                        <div className="px-6 pb-6 text-kiqao-cream/70 leading-relaxed border-t border-kiqao-charcoal pt-4">
+                        <div className="px-6 pb-6 text-kiqao-cream/70 leading-relaxed border-t border-kiqao-gold/15 pt-4">
                           {faq.a}
                         </div>
                       </motion.div>

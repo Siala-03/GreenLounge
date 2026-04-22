@@ -1,5 +1,5 @@
 /* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap');
 
 /* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
 @import 'tailwindcss/base';
@@ -10,49 +10,213 @@
 
 :root {
   --color-black: #0A0A0A;
-  --color-rich-black: #1A1A1A;
-  --color-charcoal: #2A2A2A;
-  --color-gold: #C9A96E;
-  --color-champagne: #D4AF37;
-  --color-burgundy: #722F37;
-  --color-merlot: #7B3F4E;
-  --color-cream: #F5F0E8;
-  --color-warm-white: #FAF7F2;
+  --color-rich-black: #111111;
+  --color-charcoal: #1C1C1C;
+  --color-emerald: #1A7A45;
+  --color-gold: #FFFFFF;
+  --color-champagne: #FAF8F5;
+  --color-sage: #7BAA8A;
+  --color-cream: #EEE8DF;
+  --color-warm-white: #FAF8F5;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-color: #0A0A0A;
-  color: #F5F0E8;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(255, 255, 255, 0.038) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(255, 255, 255, 0.012) 0%, transparent 60%);
+  color: #EEE8DF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Subtle film grain for tactile depth */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.022;
+  background-size: 200px 200px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.01em;
 }
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0A0A0A;
-}
-::-webkit-scrollbar-thumb {
-  background: #C9A96E;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
-}
-/* Selection color */
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #FFFFFF; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #FAF8F5; }
+
+/* Selection */
 ::selection {
-  background-color: rgba(201, 169, 110, 0.3);
-  color: #FAF7F2;
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #FAF8F5;
+}
+
+/* Luxury focus glow for form inputs */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.16);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(45, 184, 122, 0.9);
+  outline-offset: 3px;
+}
+
+/* ─── Gold shimmer — hero headline accent ─────────────────────── */
+.label-gold {
+  background: linear-gradient(90deg, #FFFFFF 0%, #FAF8F5 40%, #FFFFFF 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ─── Gold rule — decorative horizontal divider ───────────────── */
+.gold-rule {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #FFFFFF;
+}
+.gold-rule::before,
+.gold-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FFFFFF 40%, transparent);
+  opacity: 0.5;
+}
+
+/* ─── Section eyebrow label (brand green) ────────────────────── */
+.eyebrow {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #2DB87A;
+}
+
+/* ─── Luxury card ─────────────────────────────────────────────── */
+.card-luxury {
+  background: #1C1C1C;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-luxury:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.08), 0 1px 0 rgba(255, 255, 255, 0.14) inset;
+}
+
+.info-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.95rem 1rem;
+  background: rgba(17, 17, 17, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+}
+
+.info-chip:hover {
+  border-color: rgba(45, 184, 122, 0.5);
+  background: rgba(17, 17, 17, 0.9);
+  transform: translateY(-2px);
+}
+
+.inner-hero {
+  position: relative;
+  min-height: 300px;
+  height: 34vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.page-section-lg {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.reveal-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.reveal-panel:hover {
+  transform: translateY(-3px);
+  border-color: rgba(45, 184, 122, 0.28);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.28);
+}
+
+.mobile-cta-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(180deg, rgba(28, 28, 28, 0.92), rgba(10, 10, 10, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 768px) {
+  .inner-hero {
+    min-height: 400px;
+    height: 40vh;
+  }
+
+  .page-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .page-section-lg {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* ─── Hero overlay ────────────────────────────────────────────── */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.72) 0%,
+    rgba(10, 10, 10, 0.45) 40%,
+    rgba(10, 10, 10, 0.85) 100%
+  );
+}
+
+/* ─── Animations ──────────────────────────────────────────────── */
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position:  200% center; }
 }

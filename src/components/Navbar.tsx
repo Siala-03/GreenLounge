@@ -45,18 +45,25 @@ export function Navbar() {
   }, [location.pathname]);
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${isScrolled ? 'bg-kiqao-rich-black/95 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${isScrolled ? 'bg-kiqao-black/98 backdrop-blur-xl py-4 shadow-lg border-b border-kiqao-gold/15' : 'bg-transparent py-6'}`}>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex flex-col items-center group">
-            <span className="font-display text-2xl md:text-3xl tracking-widest text-kiqao-warm-white group-hover:text-kiqao-gold transition-colors">
-              KIQAO
-            </span>
-            <span className="text-[0.65rem] tracking-[0.3em] text-kiqao-gold mt-1">
-              LOUNGE
-            </span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img
+              src="/assets/logo-green.png"
+              alt="The Green Lounge logo"
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-kiqao-gold/30 object-cover"
+            />
+            <div className="flex flex-col items-start">
+              <span className="font-display text-xl md:text-2xl tracking-wide text-kiqao-emerald group-hover:text-kiqao-emerald transition-colors leading-none">
+                THE GREEN
+              </span>
+              <span className="text-[0.62rem] tracking-[0.3em] text-kiqao-emerald mt-1 leading-none">
+                LOUNGE
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,14 +72,14 @@ export function Navbar() {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm tracking-wide transition-colors hover:text-kiqao-gold ${location.pathname === link.path ? 'text-kiqao-gold font-medium' : 'text-kiqao-cream'}`}>
+              className={`text-sm tracking-wide transition-all relative after:absolute after:bottom-[-5px] after:left-0 after:h-px after:bg-kiqao-emerald after:transition-all after:duration-300 hover:text-kiqao-emerald ${location.pathname === link.path ? 'text-kiqao-emerald after:w-full' : 'text-kiqao-cream after:w-0 hover:after:w-full'}`}>
               
                 {link.name}
               </Link>
             )}
             <Link
               to="/reservations"
-              className="px-6 py-2.5 bg-kiqao-gold text-kiqao-black text-sm font-medium tracking-wide hover:bg-kiqao-champagne transition-colors rounded-sm">
+              className="px-6 py-2.5 bg-kiqao-gold text-kiqao-black text-sm font-medium tracking-wide hover:bg-kiqao-emerald hover:text-white transition-all rounded-sm shadow-gold-sm hover:shadow-gold">
               
               Book a Table
             </Link>
@@ -112,22 +119,22 @@ export function Navbar() {
           transition={{
             duration: 0.3
           }}
-          className="md:hidden absolute top-full left-0 right-0 bg-kiqao-rich-black border-t border-kiqao-charcoal overflow-hidden flex flex-col">
+          className="md:hidden absolute top-full left-0 right-0 bg-kiqao-rich-black border-t border-white/10 overflow-hidden flex flex-col">
           
             <div className="flex flex-col px-6 py-8 space-y-6">
               {navLinks.map((link) =>
             <Link
               key={link.name}
               to={link.path}
-              className={`text-lg tracking-wide transition-colors ${location.pathname === link.path ? 'text-kiqao-gold' : 'text-kiqao-cream'}`}>
+              className={`text-lg tracking-wide transition-colors ${location.pathname === link.path ? 'text-kiqao-emerald' : 'text-kiqao-cream'}`}>
               
                   {link.name}
                 </Link>
             )}
-              <div className="pt-6 border-t border-kiqao-charcoal">
+              <div className="pt-6 border-t border-white/10">
                 <Link
                 to="/reservations"
-                className="block w-full text-center px-6 py-3 bg-kiqao-gold text-kiqao-black font-medium tracking-wide hover:bg-kiqao-champagne transition-colors rounded-sm">
+                className="block w-full text-center px-6 py-3 bg-kiqao-gold text-kiqao-black font-medium tracking-wide hover:bg-kiqao-emerald hover:text-white transition-all rounded-sm shadow-gold-sm">
                 
                   Book a Table
                 </Link>

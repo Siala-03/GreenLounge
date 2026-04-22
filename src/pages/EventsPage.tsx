@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CalendarIcon, ClockIcon, UsersIcon } from 'lucide-react';
 import { PageTransition } from '../components/PageTransition';
@@ -50,7 +49,7 @@ export function EventsPage() {
     <PageTransition>
       <main className="flex-grow bg-kiqao-black text-kiqao-cream">
         {/* Hero Banner */}
-        <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center">
+        <section className="inner-hero">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1920"
@@ -85,20 +84,20 @@ export function EventsPage() {
               transition={{
                 delay: 0.2
               }}
-              className="text-kiqao-gold tracking-widest uppercase text-sm">
-              
-              Unforgettable moments at Kiqao
+              className="eyebrow">
+
+              Kigali's most sought-after rooftop experiences
             </motion.p>
           </div>
         </section>
 
         {/* Upcoming Events */}
-        <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="page-section-lg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl text-kiqao-warm-white mb-4">
               Upcoming Events
             </h2>
-            <div className="w-16 h-0.5 bg-kiqao-gold mx-auto"></div>
+            <div className="w-12 h-px bg-kiqao-emerald mx-auto opacity-80"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -119,7 +118,7 @@ export function EventsPage() {
               transition={{
                 delay: idx * 0.1
               }}
-              className="bg-kiqao-charcoal border border-kiqao-charcoal hover:border-kiqao-gold/30 transition-colors p-8 rounded-sm flex flex-col h-full">
+              className="bg-kiqao-charcoal border border-kiqao-gold/20 hover:border-kiqao-gold/50 transition-all p-6 md:p-8 rounded-sm flex flex-col h-full shadow-sm hover:shadow-gold-sm reveal-panel">
               
                 <div className="flex justify-between items-start mb-6">
                   <h3 className="font-display text-2xl text-kiqao-warm-white">
@@ -132,15 +131,15 @@ export function EventsPage() {
 
                 <div className="space-y-3 mb-6 flex-grow">
                   <div className="flex items-center text-kiqao-cream/70 text-sm">
-                    <CalendarIcon className="w-4 h-4 mr-3 text-kiqao-gold" />
+                    <CalendarIcon className="w-4 h-4 mr-3 text-kiqao-emerald" />
                     {event.date}
                   </div>
                   <div className="flex items-center text-kiqao-cream/70 text-sm">
-                    <ClockIcon className="w-4 h-4 mr-3 text-kiqao-gold" />
+                    <ClockIcon className="w-4 h-4 mr-3 text-kiqao-emerald" />
                     {event.time}
                   </div>
                   <div className="flex items-center text-kiqao-cream/70 text-sm">
-                    <UsersIcon className="w-4 h-4 mr-3 text-kiqao-gold" />
+                    <UsersIcon className="w-4 h-4 mr-3 text-kiqao-emerald" />
                     {event.capacity}
                   </div>
                 </div>
@@ -151,7 +150,7 @@ export function EventsPage() {
 
                 <Link
                 to="/reservations"
-                className="mt-auto w-full py-3 border border-kiqao-gold text-kiqao-gold text-center uppercase tracking-wider text-sm font-medium hover:bg-kiqao-gold hover:text-kiqao-black transition-colors rounded-sm">
+                className="mt-auto w-full py-3 border border-kiqao-emerald text-kiqao-emerald text-center uppercase tracking-wider text-sm font-medium hover:bg-kiqao-emerald hover:text-kiqao-black transition-colors rounded-sm">
                 
                   Reserve Spot
                 </Link>
@@ -161,20 +160,20 @@ export function EventsPage() {
         </section>
 
         {/* Private Events CTA */}
-        <section className="py-24 bg-kiqao-rich-black border-y border-kiqao-charcoal">
+        <section className="page-section bg-kiqao-rich-black border-y border-white/10">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="font-display text-4xl text-kiqao-warm-white mb-6">
               Host a Private Event
             </h2>
             <p className="text-kiqao-cream/80 text-lg mb-10 leading-relaxed font-light">
-              From intimate celebrations to corporate gatherings, our private
-              dining spaces offer the perfect backdrop for your special
-              occasion. Let our dedicated events team craft a bespoke experience
-              tailored to your needs.
+              From intimate birthday dinners and corporate after-work events to
+              full rooftop buyouts, The Green Lounge offers Kigali's most
+              prestigious private event setting. Our team handles every detail
+              so you can focus on the moment.
             </p>
             <Link
               to="/contact"
-              className="inline-block px-8 py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-champagne transition-colors rounded-sm">
+              className="inline-block px-8 py-4 bg-kiqao-gold text-kiqao-black font-medium tracking-wider hover:bg-kiqao-emerald hover:text-white transition-colors rounded-sm">
               
               Inquire Now
             </Link>
@@ -182,12 +181,12 @@ export function EventsPage() {
         </section>
 
         {/* Past Events Gallery */}
-        <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="page-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl text-kiqao-warm-white mb-4">
               Past Memories
             </h2>
-            <div className="w-16 h-0.5 bg-kiqao-gold mx-auto"></div>
+            <div className="w-12 h-px bg-kiqao-emerald mx-auto opacity-80"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -216,8 +215,8 @@ export function EventsPage() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               
                 <div className="absolute inset-0 bg-kiqao-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-kiqao-gold font-display text-xl tracking-wider">
-                    Kiqao Moments
+                  <span className="text-kiqao-emerald font-display text-xl tracking-wider">
+                    Green Lounge Moments
                   </span>
                 </div>
               </motion.div>
