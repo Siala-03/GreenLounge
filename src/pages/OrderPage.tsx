@@ -94,7 +94,7 @@ const categories: MenuCategory[] = [
 'Desserts',
 'Wine List'];
 
-const ONLINE_MENU_URL = https://servv-psi.vercel.app/order/5UHFSK5G;
+const ONLINE_MENU_URL = 'https://servv-psi.vercel.app/order/5UHFSK5G';
 
 export function OrderPage() {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>('Starters');
