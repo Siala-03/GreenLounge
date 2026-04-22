@@ -42,7 +42,7 @@ export function HomePage() {
         <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920"
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEo2Hzv4m0XBhoU_vjYmcroAX2T-WaAOepsElAdysNGl5dBs4g53PA3Hzma7MGPCgA4WXOVFJBXoK6emXhSA5Z24Q8FA-gy4C_l7UjL8pzOfVwL-7S4SlxwtMJlHUMt_ELFtG5O3g=s680-w680-h510-rw"
               alt="Fine dining atmosphere"
               className="w-full h-full object-cover object-center scale-105" />
             <div className="absolute inset-0 hero-overlay"></div>
