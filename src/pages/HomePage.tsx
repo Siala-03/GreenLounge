@@ -146,7 +146,7 @@ export function HomePage() {
               
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="https://lh3.googleusercontent.com/p/AF1QipMWv67TxTSzvXCFQ_MV0YLumwkxlRJTODN8Rmhq=s680-w680-h510-rw"
+                  src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBP5x-0QD0EXjGnInyEglLmqw6y9CT-rdS6EGHcK_oPZ72ApGVutie35kAFJqmAt1pcbFgRXydSznLPYkfwTaA0SIzNco3dHDc0NtahLeSi2TaGoVIBm61PexujpcweQnz7FATiw=s680-w680-h510-rw"
                   alt="Restaurant interior"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
               </div>
@@ -247,19 +247,19 @@ export function HomePage() {
                 name: 'Filet Mignon',
                 desc: 'Perfectly seared with truffle jus and seasonal vegetables',
                 price: 'RWF 60,000',
-                img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweoNINUKALKnq468ViFeiZucYpAE8KjAmcRKNqvgfJjKFf5Wk_X6k8KFZNfD2fJ72ePmn-E4WDMEU41GK89D_JrRLn0l2lXjdLfxkeUk7hNFu3kymyaU66Cgf55T4RWmT-XEmvQpBA=w243-h406-n-k-no-nu'
+                img: 'https://images.pexels.com/photos/5638540/pexels-photo-5638540.jpeg'
               },
               {
                 name: 'Grilled Chicken',
                 desc: 'With fresh herbs and roasted seasonal vegetables',
                 price: 'RWF 40,000',
-                img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweq61k1h1hlohu7nNEBfnkiD6XuIIdf7T_5HftSChXj5uFM747zTgR4HJJR9cWqB4CTHfE3r8k5jrx2eg2SmmQmQ0KMsotKhL02PFbxEo3E7l4KcEERf3FitW5yOtmhv1LVTU_YP=w243-h406-n-k-no-nu'
+                img: 'https://images.pexels.com/photos/36750260/pexels-photo-36750260.jpeg'
               },
               {
                 name: 'Mushroom Risotto',
                 desc: 'Creamy arborio rice with wild mushrooms and parmesan',
                 price: 'RWF 30,000',
-                img: 'https://lh3.googleusercontent.com/gps-cs-s/AHVAweodshvNWigwxSsTSWM_oR1H5ZBwLihJ7jv0NtU3BFA7NIH4T-XxyNGMQ_gtYkcACHj0Mcd9O8znoilg_OVAYToNzDhB4-IpUP4jZhDFr_NdodoXccE292655bcDQ04uQvYotrQFER-DF_Cd=w243-h174-n-k-no-nu'
+                img: 'https://images.pexels.com/photos/6406460/pexels-photo-6406460.jpeg'
               }].
               map((dish, i) =>
               <motion.div
