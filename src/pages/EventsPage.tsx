@@ -37,8 +37,8 @@ const upcomingEvents = [
 }];
 
 const pastEventsImages = [
-'https://lh3.googleusercontent.com/gps-cs-s/AHVAweokl7nkQ43kBf1czeS3F-dVHANVdR-lYhtGYuyuSw3STogPTMYtOy0wysNNxaREyGlBSUJh2jqKkMwFaNtoDEg22XMHOo63xyQcOPkuw4dwdxgZSlfCxm9qIlO9YyY5DqOtu7SwBl_h_uzC=s680-w680-h510-rw',
-'https://lh3.googleusercontent.com/gps-cs-s/AHVAweqVsOQQFiejgXo3wLI3nc3-5tCq_CnYfCvRnLcgGsYQw0IVTmdIGKM3fjs7DLUipgpkmHHk3D9qfHM2QdEfjiqMqgQfjumKhJSm9iMj10P_kKAbmOCEEcsJQQD27j9_e50_ykBKch-agRDq=s680-w680-h510-rw',
+'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGAAgl9DbSDKbUQkJ5aYUxpIuC-BwA8yS6gltKMvVtHj1jy6v8BYgx5rdqwemwLyX3yNl95DnPRhWBmUZR-07_kXMy3ERHScpzCNLisyUGdyh6eGgo9M23_JJ0HcC-nbbWMU41vbg=s680-w680-h510-rw',
+'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHsoHh1XFdVM23tKwnIPIJtkUWSK68gYcp3RYb8sfrWUuAfrhr3MCYXH2Yj0aoFIQXdtiARUPtZ4sqV4Zcdfwc8YZrGmbse9sq4e9vFF1RdzWylbI1BYPWpXcCqCC3-0iK5F62UQ=s680-w680-h510-rw',
 'https://lh3.googleusercontent.com/p/AF1QipM21yFeKQwYMICtGwpdsT88DocSiRza-IqLF7_G=w141-h235-n-k-no-nu',
 'https://lh3.googleusercontent.com/p/AF1QipMVo7ZrpWik9kkW-K8BTzsIfZSI05qP10ICqPHo=w141-h118-n-k-no-nu',
 'https://lh3.googleusercontent.com/gps-cs-s/AHVAwepp40HOIUBuq-WaOQL-FZBq09_-tNdieL6py0LakSxWnVLXgwMeYF3yO0943_I4qhOz5TRWO8NTOxiFRrM6kICSbgoWh6R1k0i6yZImbKdrNgP0yN9cG6gUsSSpTWk67lBS90QH2ZT8L0tC=w141-h118-n-k-no-nu',
