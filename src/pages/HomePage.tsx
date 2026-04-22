@@ -64,7 +64,7 @@ export function HomePage() {
 
               <motion.h1
                 variants={fadeInUp}
-                className="font-display text-6xl md:text-8xl lg:text-9xl text-kiqao-emerald leading-[0.9] tracking-tight">
+                className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-kiqao-emerald leading-[0.9] tracking-tight">
 
                 The Green<br />
                 <span className="italic">Lounge</span>
@@ -94,7 +94,7 @@ export function HomePage() {
 
               <motion.div
                 variants={fadeInUp}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto pt-4 text-left">
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-3xl mx-auto pt-4 text-left">
                 <div className="info-chip">
                   <MapPinIcon className="w-4 h-4 text-kiqao-emerald flex-shrink-0" />
                   <div>
@@ -133,7 +133,7 @@ export function HomePage() {
 
         {/* SECTION B: ABOUT/STORY */}
         <section id="story" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -209,7 +209,7 @@ export function HomePage() {
                   value: '200+'
                 }].
                 map((stat, i) =>
-                <div key={i} className="text-center sm:text-left">
+                <div key={i} className="text-center">
                     <div className="font-display text-3xl text-kiqao-gold mb-1">
                       {stat.value}
                     </div>
@@ -270,7 +270,7 @@ export function HomePage() {
                 transition={{ delay: i * 0.15, duration: 0.6 }}
                 className="card-luxury overflow-hidden group">
 
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative aspect-video sm:aspect-square md:aspect-[4/3] overflow-hidden">
                     <img
                     src={dish.img}
                     alt={dish.name}

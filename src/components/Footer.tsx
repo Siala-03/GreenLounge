@@ -12,13 +12,13 @@ export function Footer() {
         <div className="md:hidden mobile-cta-strip reveal-panel">
           <a
             href="tel:+250788331660"
-            className="flex items-center justify-center px-4 py-3 border border-kiqao-emerald text-kiqao-emerald uppercase tracking-[0.14em] text-xs font-semibold hover:bg-kiqao-emerald hover:text-white transition-colors"
+            className="flex items-center justify-center px-4 py-3.5 sm:py-3 border border-kiqao-emerald text-kiqao-emerald uppercase tracking-[0.14em] text-xs font-semibold hover:bg-kiqao-emerald hover:text-white transition-colors"
           >
             Call Now
           </a>
           <Link
             to="/reservations"
-            className="flex items-center justify-center px-4 py-3 bg-kiqao-gold text-kiqao-black uppercase tracking-[0.14em] text-xs font-semibold hover:bg-kiqao-emerald hover:text-white transition-colors"
+            className="flex items-center justify-center px-4 py-3.5 sm:py-3 bg-kiqao-gold text-kiqao-black uppercase tracking-[0.14em] text-xs font-semibold hover:bg-kiqao-emerald hover:text-white transition-colors"
           >
             Book Table
           </Link>
@@ -122,11 +122,11 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Subscribe to newsletter"
-                className="bg-kiqao-charcoal border border-kiqao-gold/25 text-kiqao-cream px-4 py-2 w-full focus:outline-none focus:border-kiqao-gold text-sm rounded-l-sm" />
+                className="bg-kiqao-charcoal border border-kiqao-gold/25 text-kiqao-cream px-3 sm:px-4 py-2.5 sm:py-2 w-full focus:outline-none focus:border-kiqao-gold text-xs sm:text-sm rounded-l-sm" />
               
               <button
                 type="submit"
-                className="bg-kiqao-gold text-kiqao-black px-4 py-2 hover:bg-kiqao-emerald hover:text-white transition-colors rounded-r-sm flex items-center justify-center"
+                className="bg-kiqao-gold text-kiqao-black px-3 sm:px-4 py-2.5 sm:py-2 hover:bg-kiqao-emerald hover:text-white transition-colors rounded-r-sm flex items-center justify-center"
                 aria-label="Subscribe">
                 
                 <SendIcon className="w-4 h-4" />

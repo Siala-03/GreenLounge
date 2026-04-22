@@ -240,7 +240,7 @@ export function MenuPage() {
         {/* Menu Content */}
         <section className="page-section max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 md:gap-8 mb-12 md:mb-16 border-b border-white/10 pb-5 md:pb-6">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 lg:gap-8 mb-12 md:mb-16 border-b border-white/10 pb-4 sm:pb-5 lg:pb-6">
             {categories.map((cat) =>
             <button
               key={cat}
@@ -290,7 +290,7 @@ export function MenuPage() {
                             {item.tags.map((tag) =>
                         <span
                           key={tag}
-                          className="text-[10px] border border-kiqao-gold/50 text-kiqao-gold px-1 rounded-sm">
+                          className="text-[0.65rem] sm:text-[10px] border border-kiqao-gold/50 text-kiqao-gold px-1.5 sm:px-2 rounded-sm">
                           
                                 {tag}
                               </span>

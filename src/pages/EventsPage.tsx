@@ -120,7 +120,7 @@ export function EventsPage() {
               }}
               className="bg-kiqao-charcoal border border-kiqao-gold/20 hover:border-kiqao-gold/50 transition-all p-6 md:p-8 rounded-sm flex flex-col h-full shadow-sm hover:shadow-gold-sm reveal-panel">
               
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-0 mb-6">
                   <h3 className="font-display text-2xl text-kiqao-warm-white">
                     {event.title}
                   </h3>

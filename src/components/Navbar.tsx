@@ -60,7 +60,7 @@ export function Navbar() {
               <span className="font-display text-xl md:text-2xl tracking-wide text-kiqao-emerald group-hover:text-kiqao-emerald transition-colors leading-none">
                 THE GREEN
               </span>
-              <span className="text-[0.62rem] tracking-[0.3em] text-kiqao-emerald mt-1 leading-none">
+              <span className="text-[0.55rem] sm:text-[0.62rem] tracking-[0.2em] sm:tracking-[0.3em] text-kiqao-emerald mt-1 leading-none">
                 LOUNGE
               </span>
             </div>

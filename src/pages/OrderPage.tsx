@@ -218,7 +218,7 @@ export function OrderPage() {
 
           {/* External Ordering Sidebar */}
           <aside className="lg:w-96 flex-shrink-0">
-            <div className="lg:sticky lg:top-32 bg-kiqao-rich-black border border-white/10 rounded-sm p-6 md:p-8 reveal-panel">
+            <div className="md:sticky md:top-24 lg:top-32 bg-kiqao-rich-black border border-white/10 rounded-sm p-6 md:p-8 reveal-panel md:h-fit">
               <h2 className="font-display text-3xl text-kiqao-warm-white mb-4">
                 Ready to Order?
               </h2>
