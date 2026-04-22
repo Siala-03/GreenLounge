@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   WineIcon,
-  StarIcon,
   ArrowRightIcon,
   ChevronDownIcon,
   Clock3Icon,
@@ -495,83 +494,6 @@ export function HomePage() {
                     Learn More{' '}
                     <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                </motion.div>
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION F: TESTIMONIALS */}
-        <section className="py-24 md:py-32 bg-kiqao-rich-black px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.h2
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              className="font-display text-4xl md:text-5xl text-kiqao-warm-white mb-16">
-              
-              What Our Guests Say
-            </motion.h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-              {
-                quote:
-                'The rooftop view, the cocktails, the food — everything was perfect. The Green Lounge is on another level in Kigali.',
-                name: 'Sarah M.'
-              },
-              {
-                quote:
-                'Our go-to spot for client dinners and special occasions. The ambiance, service, and food never disappoint.',
-                name: 'James K.'
-              },
-              {
-                quote:
-                "Best lounge in Kigali, full stop. The vibe is unmatched and the cocktails are crafted with real care.",
-                name: 'Amara O.'
-              }].
-              map((testimonial, i) =>
-              <motion.div
-                key={i}
-                initial={{
-                  opacity: 0,
-                  scale: 0.95
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1
-                }}
-                viewport={{
-                  once: true
-                }}
-                transition={{
-                  delay: i * 0.2,
-                  duration: 0.5
-                }}
-                className="bg-kiqao-charcoal p-10 rounded-sm relative">
-                
-                  <div className="flex justify-center mb-6 space-x-1">
-                    {[...Array(5)].map((_, j) =>
-                  <StarIcon
-                    key={j}
-                    className="w-5 h-5 text-kiqao-gold fill-kiqao-gold" />
-
-                  )}
-                  </div>
-                  <p className="text-kiqao-cream/90 italic mb-8 leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
-                  <p className="font-display text-kiqao-emerald text-lg">
-                    — {testimonial.name}
-                  </p>
                 </motion.div>
               )}
             </div>
