@@ -36,10 +36,10 @@ export function Footer() {
                 className="w-12 h-12 rounded-full border border-kiqao-gold/30 object-cover"
               />
               <div className="flex flex-col items-start">
-                <span className="font-display text-2xl tracking-wide text-kiqao-emerald leading-none">
+                <span className="font-display font-semibold text-2xl tracking-wide text-kiqao-emerald leading-none">
                   THE GREEN
                 </span>
-                <span className="text-[0.65rem] tracking-[0.3em] text-kiqao-emerald mt-1 leading-none">
+                <span className="font-semibold text-[0.65rem] tracking-[0.3em] text-kiqao-emerald mt-1 leading-none">
                   LOUNGE
                 </span>
               </div>

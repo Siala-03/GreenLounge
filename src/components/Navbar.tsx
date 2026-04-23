@@ -57,10 +57,10 @@ export function Navbar() {
               className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-kiqao-gold/30 object-cover"
             />
             <div className="flex flex-col items-start">
-              <span className="font-display font-semibold text-xl md:text-2xl tracking-wide text-kiqao-warm-white group-hover:text-kiqao-warm-white transition-colors leading-none">
+              <span className="font-display font-semibold text-xl md:text-2xl tracking-wide text-kiqao-emerald group-hover:text-kiqao-emerald transition-colors leading-none">
                 THE GREEN
               </span>
-              <span className="text-[0.55rem] sm:text-[0.62rem] tracking-[0.2em] sm:tracking-[0.3em] text-kiqao-emerald mt-1 leading-none">
+              <span className="font-semibold text-[0.55rem] sm:text-[0.62rem] tracking-[0.2em] sm:tracking-[0.3em] text-kiqao-emerald mt-1 leading-none">
                 LOUNGE
               </span>
             </div>
