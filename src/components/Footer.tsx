@@ -35,7 +35,7 @@ export function Footer() {
                 alt="The Green Lounge logo"
                 className="w-12 h-12 rounded-full border border-kiqao-gold/30 object-cover"
               />
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-center">
                 <span className="font-display font-semibold text-2xl tracking-wide text-kiqao-emerald leading-none">
                   THE GREEN
                 </span>

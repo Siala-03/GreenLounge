@@ -56,7 +56,7 @@ export function Navbar() {
               alt="The Green Lounge logo"
               className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-kiqao-gold/30 object-cover"
             />
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-center">
               <span className="font-display font-semibold text-xl md:text-2xl tracking-wide text-kiqao-emerald group-hover:text-kiqao-emerald transition-colors leading-none">
                 THE GREEN
               </span>
